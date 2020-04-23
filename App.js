@@ -16,13 +16,13 @@ class ContarCaracteres extends React.Component {
     this.setState(() => ({ texto: texto }))
   }
   iniciarCronometro() {
-    clearInterval(this.cronometro);
-    this.cronometro = setInterval(() => { this.setState(() => ({ tempo: this.state.tempo - 1 })) }, 1000);
-    this.setState(() => ({ editar: true }))
+    clearInterval(this.tempo);
+    this.tempo = setInterval(() => { this.setState(() => ({ tempo: this.state.tempo - 1 })) }, 1000);
+    this.setState(() => ({ editar: true, tempo: 10, texto: '' }))
   }
   componentDidUpdate() {
     if (this.state.tempo === 0) {
-      clearInterval(this.cronometro)
+      clearInterval(this.tempo)
       this.setState(() => ({ editar: false, tempo: 10, texto: '' }))
       Alert.alert(` Sua Pontuação é: ${this.state.texto.length} caracteres\n Parabéns!`)
     }
