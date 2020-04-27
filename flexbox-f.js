@@ -4,8 +4,8 @@ import { StyleSheet, Text, View, SafeAreaView, Button, Alert, TextInput } from '
 const Caixa = ({ cor, flex }) => {
   return (
     <View style={{
-      width: 150,
-      height: 180,
+      width: 100,
+      height: 100,
       borderWidth: 2,
       borderColor: 'black',
       backgroundColor: cor,
@@ -19,12 +19,14 @@ const Caixa = ({ cor, flex }) => {
 const App = () => {
   return (
     <View style={{ paddingTop: 30, flex: 1 }}>
-      <View style={{ flexDirection: 'column', flex: 1, flexWrap: 'wrap' }}>
+      <View style={{ flexDirection: 'row', flex: 1 }}>
         <Caixa cor='red' />
-        <Caixa cor='blue' />
+        <View style={{flexDirection: 'row', flex: 1, paddingHorizontal: 30}}>
+          <Caixa cor='blue' />
+        </View>
+      </View>
+      <View style={{ flexDirection: 'row', flex: 1, justifyContent: 'flex-end', alignItems: 'flex-end' }}>
         <Caixa cor='yellow' />
-        <Caixa cor='green' />
-        <Caixa cor='purple' />
       </View>
     </View>
   )

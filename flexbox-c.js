@@ -4,13 +4,13 @@ import { StyleSheet, Text, View, SafeAreaView, Button, Alert, TextInput } from '
 const Caixa = ({ cor, flex }) => {
   return (
     <View style={{
-      width: 150,
-      height: 180,
+      width: 100,
+      height: 100,
       borderWidth: 2,
       borderColor: 'black',
       backgroundColor: cor,
       margin: 2,
-      flex: flex
+      flex: flex,
     }}>
     </View>
   )
@@ -18,13 +18,11 @@ const Caixa = ({ cor, flex }) => {
 
 const App = () => {
   return (
-    <View style={{ paddingTop: 30, flex: 1 }}>
-      <View style={{ flexDirection: 'column', flex: 1, flexWrap: 'wrap' }}>
+    <View style = {{paddingTop: 30, flex: 1}}>
+      <View style={{ flexDirection: 'column', flex: 1, justifyContent:'space-between' , alignItems: 'center'}}>
         <Caixa cor='red' />
         <Caixa cor='blue' />
         <Caixa cor='yellow' />
-        <Caixa cor='green' />
-        <Caixa cor='purple' />
       </View>
     </View>
   )
