@@ -4,7 +4,7 @@ import { StyleSheet, Text, View, SafeAreaView, Button, Alert, TextInput } from '
 const CaixaMaior = ({ cor, flex }) => {
   return (
     <View style={{
-      width: 150,
+      width: 175,
       height: 180,
       borderWidth: 2,
       borderColor: 'black',
