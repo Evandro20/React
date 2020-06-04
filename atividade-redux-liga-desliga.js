@@ -1,5 +1,5 @@
 import React from 'react';
-import { SafeAreaView, View, Text, Button } from 'react-native';
+import { SafeAreaView } from 'react-native';
 import Box from './src/components/Box'
 import { Provider } from 'react-redux'
 import { store } from './src/store/store-turn-on-or-off'

@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, Button } from 'react-native';
 import { connect } from 'react-redux'
-import { turnOnOrOff } from '../action/turn-on-or-off'
+import { turnOnOrOff } from '../actions/turn-on-or-off'
 
 const Box = ({ color, on, dispatch }) => {
   return (
